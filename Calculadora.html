@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Pobre</title>
+    <title>Calculadora Fulera</title>
     <style>
         body {
             background-color: rgb(130, 204, 80);
@@ -38,6 +38,10 @@
         <button onclick="porcentagem()">
         Porcetagem
         </button>
+
+        <button onclick="potencia()">
+        Exponenciação
+        </button>
     
 <script>
     let res = document.getElementById('res')
@@ -67,6 +71,11 @@
     function porcentagem() {
         let porcentagem = (Number(number1.value) / 100) * Number(number2.value)
         res.innerHTML = porcentagem  
+    }
+
+    function potencia() {
+        let potencia = Number(number1.value) ** Number(number2.value)
+        res.innerHTML = potencia  
     }
 </script>
 
