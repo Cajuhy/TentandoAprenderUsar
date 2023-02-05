@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pobre</title>
+    <style>
+        body {
+            background-color: rgb(130, 204, 80);
+        }
+    </style>
+</head>
+<body>
+    <H2>Calculadora</H2>
+
+    <input type="number" id="number1"/>
+    <input type="number" id="number2"/>
+
+        <p id="res"></p>
+
+        <button onclick="soma()">
+        Somar
+        </button>
+
+        <button onclick="subtracao()">
+        Subtrair
+        </button>
+
+        <button onclick="multiplicacao()">
+        Multiplicar
+        </button>
+
+        <button onclick="divisao()">
+        Dividir
+        </button>
+
+        <button onclick="porcentagem()">
+        Porcetagem
+        </button>
+    
+<script>
+    let res = document.getElementById('res')
+    let number1 = document.getElementById('number1')
+    let number2 = document.getElementById('number2')
+
+    function soma() {
+        let soma = Number(number1.value) + Number(number2.value)
+        res.innerHTML = soma
+    }
+
+    function subtracao() {
+        let subtracao = Number(number1.value) - Number(number2.value)
+            res.innerHTML = subtracao
+    }        
+            
+    function multiplicacao() {
+        let multiplicacao = Number(number1.value) * Number(number2.value)
+        res.innerHTML = multiplicacao 
+    }
+        
+    function divisao() {
+        let divisao = Number(number1.value) / Number(number2.value)
+        res.innerHTML = divisao    
+    }
+
+    function porcentagem() {
+        let porcentagem = (Number(number1.value) / 100) * Number(number2.value)
+        res.innerHTML = porcentagem  
+    }
+</script>
+
+</body>
+
+</html>
